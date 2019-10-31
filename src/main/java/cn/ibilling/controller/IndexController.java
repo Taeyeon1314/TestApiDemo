@@ -20,12 +20,20 @@ public class IndexController {
     @ApiImplicitParam(name = "username", value = "用户名", paramType = "path", required = true, dataType = "String")
     @GetMapping(value = "/user/{username}")
     @ResponseBody
-    public Result getUser(@PathVariable String username) {
+    public Result getUserByName(@PathVariable String username) {
         if (username.equals("admin")) {
             return new Result("0", "查询成功", new User(username, "1234567"));
         } else {
             return new Result("1", "查询失败", null);
         }
+    }
+
+    @ApiOperation(value = "根据用户ID查询用户信息", notes = "查询数据库中某个的用户信息")
+    @ApiImplicitParam(name = "id", value = "用户id", paramType = "path", required = true, dataType = "Integer")
+    @GetMapping(value = "/user/{id}")
+    @ResponseBody
+    public Result getUserById(@PathVariable Integer id) {
+        return new Result("0", "查询成功", new User("admin", "1234567"));
     }
 
     @ApiOperation(value = "用户登陆接口", notes = "用户用户登陆验证接口")
