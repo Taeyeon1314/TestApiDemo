@@ -20,6 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class MySwagger {
+
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -34,9 +35,9 @@ public class MySwagger {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("ibilling项目")
+                .title("计费账务系统")
                 //描述
-                .description("api查询测试接口")
+                .description("计费账务系统Api接口文档")
                 .termsOfServiceUrl("API terms of service")
                 //版本号s
                 .version("1.0")
