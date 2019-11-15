@@ -4,22 +4,54 @@ import io.swagger.annotations.ApiModelProperty;
 
 /**
  * @author Taeyeon
- * @createTime 2019-11-15-9:27
+ * @createTime 2019-11-15-10:27
  */
 public class ProductAttrBean {
-    //属性名称
-    @ApiModelProperty(value = "属性名称", name = "attrField")
+    //产品属性Id
+    @ApiModelProperty(value = "产品属性Id", name = "productAttrId")
+    private String productAttrId;
+    //产品Id
+    @ApiModelProperty(value = "产品Id", name = "productId")
+    private String productId;
+    //产品属性标识
+    @ApiModelProperty(value = "产品属性标识", name = "attrField")
     private String attrField;
-    //属性值
-    @ApiModelProperty(value = "属性值", name = "attrValue")
+    //产品属性名
+    @ApiModelProperty(value = "产品属性名", name = "attrName")
+    private String attrName;
+    //产品属性描述
+    @ApiModelProperty(value = "产品属性描述", name = "attrDesc")
+    private String attrDesc;
+    //产品属性值
+    @ApiModelProperty(value = "产品属性值", name = "attrValue")
     private String attrValue;
 
     public ProductAttrBean() {
     }
 
-    public ProductAttrBean(String attrField, String attrValue) {
+    public ProductAttrBean(String productAttrId, String productId, String attrField, String attrName, String attrDesc, String attrValue) {
+        this.productAttrId = productAttrId;
+        this.productId = productId;
         this.attrField = attrField;
+        this.attrName = attrName;
+        this.attrDesc = attrDesc;
         this.attrValue = attrValue;
+    }
+
+    public String getProductAttrId() {
+        return productAttrId;
+    }
+
+    public void setProductAttrId(String productAttrId) {
+        this.productAttrId = productAttrId;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getAttrField() {
@@ -28,6 +60,22 @@ public class ProductAttrBean {
 
     public void setAttrField(String attrField) {
         this.attrField = attrField;
+    }
+
+    public String getAttrName() {
+        return attrName;
+    }
+
+    public void setAttrName(String attrName) {
+        this.attrName = attrName;
+    }
+
+    public String getAttrDesc() {
+        return attrDesc;
+    }
+
+    public void setAttrDesc(String attrDesc) {
+        this.attrDesc = attrDesc;
     }
 
     public String getAttrValue() {

@@ -1,6 +1,5 @@
 package cn.ibilling.bean.query;
 
-import cn.ibilling.bean.bo.ProductAttrBean;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
@@ -38,12 +37,12 @@ public class InsertAndUpdateProductParameter {
     private String pricingPlanId;
     //定价计划ID
     @ApiModelProperty(value = "产品属性数组", name = "attrs", dataType = "List", required = false)
-    private List<ProductAttrBean> attrs;
+    private List<ProductAttrParameter> attrs;
 
     public InsertAndUpdateProductParameter() {
     }
 
-    public InsertAndUpdateProductParameter(String productName, String productType, String propertyType, String billingModeId, Date eftDate, Date expDate, String remark, String pricingPlanId, List<ProductAttrBean> attrs) {
+    public InsertAndUpdateProductParameter(String productName, String productType, String propertyType, String billingModeId, Date eftDate, Date expDate, String remark, String pricingPlanId, List<ProductAttrParameter> attrs) {
         this.productName = productName;
         this.productType = productType;
         this.propertyType = propertyType;
@@ -119,11 +118,11 @@ public class InsertAndUpdateProductParameter {
         this.pricingPlanId = pricingPlanId;
     }
 
-    public List<ProductAttrBean> getAttrs() {
+    public List<ProductAttrParameter> getAttrs() {
         return attrs;
     }
 
-    public void setAttrs(List<ProductAttrBean> attrs) {
+    public void setAttrs(List<ProductAttrParameter> attrs) {
         this.attrs = attrs;
     }
 }

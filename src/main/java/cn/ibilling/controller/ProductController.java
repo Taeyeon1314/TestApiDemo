@@ -75,6 +75,7 @@ public class ProductController {
      * @return json
      */
     @ApiOperation(value = "批量禁用产品", notes = "根据产品ID批量禁用产品")
+    @PostMapping("/product/batchDisable")
     public APIResultBean batchDisableProductByPrimaryKey(@RequestBody @Valid IdsParameter ids) {
         return new APIResultBean("0", "禁用成功");
     }
@@ -103,17 +104,55 @@ public class ProductController {
         return new APIResultBean("0", "启用成功");
     }
 
+    /**
+     * 根据一些条件查询产品记录数
+     *
+     * @param findProductParameter 查询条件
+     * @return json
+     */
     @ApiOperation(value = "查询产品记录数", notes = "根据一些条件查询产品记录数")
     @GetMapping("/product/total")
     public APIResultBean<PageTotalBean> getProductCount(@RequestBody @Valid FindProductParameter findProductParameter) {
         return new APIResultBean("0", "查询成功", new PageTotalBean("100"));
     }
 
+    /**
+     * 新增产品数据
+     *
+     * @param insertAndUpdateProductParameter 产品数据
+     * @return json
+     */
     @ApiOperation(value = "新增产品", notes = "新增产品数据")
-    @GetMapping("/product/add")
+    @PostMapping("/product/add")
     public APIResultBean<IdParameter> insertProduct(@RequestBody @Valid InsertAndUpdateProductParameter insertAndUpdateProductParameter) {
         return new APIResultBean("0", "新增成功", new IdParameter("100"));
     }
 
+
+    /**
+     * 修改产品数据
+     *
+     * @param insertAndUpdateProductParameter 产品数据
+     * @return json
+     */
+    @ApiOperation(value = "修改产品数据", notes = "修改产品数据")
+    @PostMapping("/product/update")
+    public APIResultBean<IdParameter> updateProduct(@RequestBody @Valid InsertAndUpdateProductParameter insertAndUpdateProductParameter) {
+        return new APIResultBean("0", "修改成功", new IdParameter("100"));
+    }
+
+
+    /**
+     * 查询产品属性数据
+     *
+     * @param id 产品Id
+     * @return json
+     */
+    @ApiOperation(value = "查询产品属性数据", notes = "根据产品Id查询产品属性数据")
+    @GetMapping("/product/attrList")
+    public APIResultBean<ListObject<ProductAttrBean>> getProductAttrList(@RequestBody @Valid IdParameter id) {
+        List<ProductAttrBean> productAttrBeanList = new ArrayList<>();
+        return new APIResultBean("0", "查询成功", productAttrBeanList);
+    }
 
 }
