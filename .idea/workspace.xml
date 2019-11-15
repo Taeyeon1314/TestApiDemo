@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/ibilling/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            <state relative-caret-position="424">
+              <caret line="154" column="42" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,7 +100,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/query/IdsParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/bo/ProductAttrParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/query/ProductAttrParameter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/bo/ProductAttrBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/util/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/dto/ProductAttrDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/query/InsertAndUpdateProductOfferParameter.java" />
@@ -111,6 +110,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/query/InsertProductParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/query/UpdateProductParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ibilling/bean/bo/ProductAttrBean.java" />
       </list>
     </option>
   </component>
@@ -150,8 +150,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -362,7 +362,7 @@
       <workItem from="1573711708903" duration="1265000" />
       <workItem from="1573713555932" duration="13189000" />
       <workItem from="1573732046221" duration="118000" />
-      <workItem from="1573732439848" duration="21446000" />
+      <workItem from="1573732439848" duration="22030000" />
     </task>
     <task id="LOCAL-00001" summary="迁移项目">
       <created>1572500566481</created>
@@ -375,7 +375,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63947000" />
+    <option name="totallyTimeSpent" value="64531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -387,10 +387,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="762" y="0" width="781" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23943663" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.49445984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -824,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ibilling/bean/bo/ProductAttrBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
@@ -838,10 +831,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ibilling/bean/bo/ProductAttrBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/ibilling/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="424">
+          <caret line="154" column="42" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
