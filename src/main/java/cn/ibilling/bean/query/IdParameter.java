@@ -13,7 +13,7 @@ import javax.validation.constraints.NotEmpty;
 public class IdParameter {
 
     @NotEmpty(message = "id不能为空")
-    @ApiModelProperty(value = "id", name = "ID")
+    @ApiModelProperty(value = "ID", name = "id")
     private String id;
 
     @Override
@@ -29,6 +29,10 @@ public class IdParameter {
     }
 
     public void setId(String id) {
+        this.id = id;
+    }
+
+    public IdParameter(@NotEmpty(message = "id不能为空") String id) {
         this.id = id;
     }
 }
