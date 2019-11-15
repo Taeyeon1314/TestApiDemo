@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class InsertProductOfferParameter {
 
-    @ApiModelProperty(value = "产品名称", name = "productName", required = true)
+    @ApiModelProperty(value = "销售品名称", name = "offerName", required = true)
     private String offerName;
     @ApiModelProperty(value = "生效时间", name = "eftDate", required = false)
     private Date effDate;

@@ -13,7 +13,7 @@ public class UpdateProductOfferParameter {
 
     @ApiModelProperty(value = "销售品ID", name = "offerId", required = true)
     private String offerId;
-    @ApiModelProperty(value = "销售品名称", name = "productName", required = true)
+    @ApiModelProperty(value = "销售品名称", name = "offerName", required = true)
     private String offerName;
     @ApiModelProperty(value = "生效时间", name = "eftDate", required = false)
     private Date effDate;

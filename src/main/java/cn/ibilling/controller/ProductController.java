@@ -42,7 +42,7 @@ public class ProductController {
      */
     @ApiOperation(value = "删除产品", notes = "根据产品ID删除产品")
     @PostMapping("/product/delete")
-    public APIResultBean deleteProductByPrimaryKey(@RequestBody @Valid IdParameter id) {
+    public APIResultBean deleteProductById(@RequestBody @Valid IdParameter id) {
         return new APIResultBean("0", "删除成功");
     }
 
@@ -54,7 +54,7 @@ public class ProductController {
      */
     @ApiOperation(value = "批量删除产品", notes = "根据产品ID批量删除产品")
     @PostMapping("/product/batchDelete")
-    public APIResultBean batchDeleteProductByPrimaryKey(@RequestBody @Valid IdsParameter ids) {
+    public APIResultBean batchDeleteProductById(@RequestBody @Valid IdsParameter ids) {
         return new APIResultBean("0", "删除成功");
     }
 
@@ -66,7 +66,7 @@ public class ProductController {
      */
     @ApiOperation(value = "禁用产品", notes = "根据产品ID禁用产品")
     @PostMapping("/product/disable")
-    public APIResultBean disableProductByPrimaryKey(@RequestBody @Valid IdParameter id) {
+    public APIResultBean disableProductById(@RequestBody @Valid IdParameter id) {
         return new APIResultBean("0", "禁用成功");
     }
 
@@ -78,7 +78,7 @@ public class ProductController {
      */
     @ApiOperation(value = "批量禁用产品", notes = "根据产品ID批量禁用产品")
     @PostMapping("/product/batchDisable")
-    public APIResultBean batchDisableProductByPrimaryKey(@RequestBody @Valid IdsParameter ids) {
+    public APIResultBean batchDisableProductById(@RequestBody @Valid IdsParameter ids) {
         return new APIResultBean("0", "禁用成功");
     }
 
@@ -90,7 +90,7 @@ public class ProductController {
      */
     @ApiOperation(value = "启用产品", notes = "根据产品ID启用产品")
     @PostMapping("/product/enable")
-    public APIResultBean enableProductByPrimaryKey(@RequestBody @Valid IdParameter id) {
+    public APIResultBean enableProductById(@RequestBody @Valid IdParameter id) {
         return new APIResultBean("0", "启用成功");
     }
 
@@ -102,7 +102,7 @@ public class ProductController {
      */
     @ApiOperation(value = "批量启用产品", notes = "根据产品ID批量启用产品")
     @PostMapping("/product/batchEnable")
-    public APIResultBean batchEnableProductByPrimaryKey(@RequestBody @Valid IdsParameter ids) {
+    public APIResultBean batchEnableProductById(@RequestBody @Valid IdsParameter ids) {
         return new APIResultBean("0", "启用成功");
     }
 
