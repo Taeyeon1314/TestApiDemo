@@ -19,6 +19,7 @@ import java.util.List;
  */
 @RestController
 @EnableSwagger2
+@Api(tags = "产品api")
 public class ProductController {
 
     /**

@@ -5,6 +5,7 @@ import cn.ibilling.bean.bo.ListObject;
 import cn.ibilling.bean.bo.PageTotalBean;
 import cn.ibilling.bean.bo.ProductOfferBean;
 import cn.ibilling.bean.query.*;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +23,7 @@ import java.util.List;
  */
 @RestController
 @EnableSwagger2
+@Api(tags = "销售品api")
 public class ProductOfferController {
 
     /**
