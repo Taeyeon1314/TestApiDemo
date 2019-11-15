@@ -1,5 +1,6 @@
 package cn.ibilling.bean.dto;
 
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
 /**
@@ -16,6 +17,7 @@ public class ProductAttrDO implements Serializable {
      * 
      * 对应数据库字段 product_attr.PRODUCT_ATTR_ID
      */
+
     private String productAttrId;
 
     /**

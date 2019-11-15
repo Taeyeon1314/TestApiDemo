@@ -1,11 +1,7 @@
 package cn.ibilling.controller;
 
 import cn.ibilling.bean.bo.*;
-import cn.ibilling.bean.query.FindProductParameter;
-import cn.ibilling.bean.query.IdParameter;
-import cn.ibilling.bean.query.IdsParameter;
-import cn.ibilling.bean.query.InsertAndUpdateProductParameter;
-import com.alibaba.fastjson.JSONObject;
+import cn.ibilling.bean.query.*;
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,9 +21,15 @@ import java.util.List;
 @EnableSwagger2
 public class ProductController {
 
+    /**
+     * 根据一些条件查询产品数据
+     *
+     * @param queryProductParameter 查询条件
+     * @return json
+     */
     @ApiOperation(value = "查询产品", notes = "根据一些条件查询产品数据")
     @GetMapping("/product")
-    public APIResultBean<ListObject<ProductBean>> findProduct(@RequestBody @Valid FindProductParameter findProductParameter) {
+    public APIResultBean<ListObject<ProductBean>> getProducts(@RequestBody @Valid QueryProductParameter queryProductParameter) {
         List<ProductBean> productBeanList = new ArrayList<>();
         return new APIResultBean("0", "查询成功", productBeanList);
     }
@@ -107,24 +109,24 @@ public class ProductController {
     /**
      * 根据一些条件查询产品记录数
      *
-     * @param findProductParameter 查询条件
+     * @param queryProductParameter 查询条件
      * @return json
      */
     @ApiOperation(value = "查询产品记录数", notes = "根据一些条件查询产品记录数")
     @GetMapping("/product/total")
-    public APIResultBean<PageTotalBean> getProductCount(@RequestBody @Valid FindProductParameter findProductParameter) {
+    public APIResultBean<PageTotalBean> getProductCount(@RequestBody @Valid QueryProductParameter queryProductParameter) {
         return new APIResultBean("0", "查询成功", new PageTotalBean("100"));
     }
 
     /**
      * 新增产品数据
      *
-     * @param insertAndUpdateProductParameter 产品数据
+     * @param insertProductParameter 产品数据
      * @return json
      */
     @ApiOperation(value = "新增产品", notes = "新增产品数据")
     @PostMapping("/product/add")
-    public APIResultBean<IdParameter> insertProduct(@RequestBody @Valid InsertAndUpdateProductParameter insertAndUpdateProductParameter) {
+    public APIResultBean<IdParameter> insertProduct(@RequestBody @Valid InsertProductParameter insertProductParameter) {
         return new APIResultBean("0", "新增成功", new IdParameter("100"));
     }
 
@@ -132,12 +134,12 @@ public class ProductController {
     /**
      * 修改产品数据
      *
-     * @param insertAndUpdateProductParameter 产品数据
+     * @param updateProductParameter 产品数据
      * @return json
      */
     @ApiOperation(value = "修改产品数据", notes = "修改产品数据")
     @PostMapping("/product/update")
-    public APIResultBean<IdParameter> updateProduct(@RequestBody @Valid InsertAndUpdateProductParameter insertAndUpdateProductParameter) {
+    public APIResultBean<IdParameter> updateProduct(@RequestBody @Valid UpdateProductParameter updateProductParameter) {
         return new APIResultBean("0", "修改成功", new IdParameter("100"));
     }
 
@@ -150,7 +152,7 @@ public class ProductController {
      */
     @ApiOperation(value = "查询产品属性数据", notes = "根据产品Id查询产品属性数据")
     @GetMapping("/product/attrList")
-    public APIResultBean<ListObject<ProductAttrBean>> getProductAttrList(@RequestBody @Valid IdParameter id) {
+    public APIResultBean<ListObject<ProductAttrBean>> getProductAttrs(@RequestBody @Valid IdParameter id) {
         List<ProductAttrBean> productAttrBeanList = new ArrayList<>();
         return new APIResultBean("0", "查询成功", productAttrBeanList);
     }

@@ -7,8 +7,8 @@ import io.swagger.annotations.ApiModelProperty;
  * @author Taeyeon
  * @createTime 2019-11-14-16:33
  */
-@ApiModel(value = "FindProductParameter", description = "产品查询类")
-public class FindProductParameter {
+@ApiModel(value = "QueryProductParameter", description = "产品查询类")
+public class QueryProductParameter {
     //产品名称
     @ApiModelProperty(value = "产品名称", name = "productName", required = false)
     private String productName;
@@ -89,7 +89,7 @@ public class FindProductParameter {
 
     @Override
     public String toString() {
-        return "FindProductParameter{" +
+        return "QueryProductParameter{" +
                 "productName='" + productName + '\'' +
                 ", state='" + state + '\'' +
                 ", remark='" + remark + '\'' +

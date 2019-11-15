@@ -7,10 +7,13 @@ import java.util.List;
 
 /**
  * @author Taeyeon
- * @createTime 2019-11-15-9:23
+ * @createTime 2019-11-15-14:13
  */
-public class InsertAndUpdateProductParameter {
+public class UpdateProductParameter {
 
+    //产品名称
+    @ApiModelProperty(value = "产品Id", name = "productId", required = true)
+    private String productId;
     //产品名称
     @ApiModelProperty(value = "产品名称", name = "productName", required = true)
     private String productName;
@@ -21,28 +24,29 @@ public class InsertAndUpdateProductParameter {
     @ApiModelProperty(value = "属性类型", name = "propertyType", required = true)
     private String propertyType;
     //计费方式
-    @ApiModelProperty(value = "计费方式", name = "billingModeId", required = true)
+    @ApiModelProperty(value = "计费方式", name = "billingModeId", required = false)
     private String billingModeId;
     //生效时间
-    @ApiModelProperty(value = "生效时间", name = "eftDate", required = true)
+    @ApiModelProperty(value = "生效时间", name = "eftDate", required = false)
     private Date eftDate;
     //失效时间
-    @ApiModelProperty(value = "失效时间", name = "expDate", required = true)
+    @ApiModelProperty(value = "失效时间", name = "expDate", required = false)
     private Date expDate;
     //备注
-    @ApiModelProperty(value = "备注", name = "remark", required = true)
+    @ApiModelProperty(value = "备注", name = "remark", required = false)
     private String remark;
     //定价计划ID
-    @ApiModelProperty(value = "定价计划ID", name = "pricingPlanId", required = true)
+    @ApiModelProperty(value = "定价计划ID", name = "pricingPlanId", required = false)
     private String pricingPlanId;
     //定价计划ID
     @ApiModelProperty(value = "产品属性数组", name = "attrs", dataType = "List", required = false)
     private List<ProductAttrParameter> attrs;
 
-    public InsertAndUpdateProductParameter() {
+    public UpdateProductParameter() {
     }
 
-    public InsertAndUpdateProductParameter(String productName, String productType, String propertyType, String billingModeId, Date eftDate, Date expDate, String remark, String pricingPlanId, List<ProductAttrParameter> attrs) {
+    public UpdateProductParameter(String productId, String productName, String productType, String propertyType, String billingModeId, Date eftDate, Date expDate, String remark, String pricingPlanId, List<ProductAttrParameter> attrs) {
+        this.productId = productId;
         this.productName = productName;
         this.productType = productType;
         this.propertyType = propertyType;
@@ -52,6 +56,14 @@ public class InsertAndUpdateProductParameter {
         this.remark = remark;
         this.pricingPlanId = pricingPlanId;
         this.attrs = attrs;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getProductName() {
