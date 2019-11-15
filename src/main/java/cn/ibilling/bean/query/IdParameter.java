@@ -13,7 +13,7 @@ import javax.validation.constraints.NotEmpty;
 public class IdParameter {
 
     @NotEmpty(message = "id不能为空")
-    @ApiModelProperty(value = "ID", name = "id")
+    @ApiModelProperty(value = "ID", name = "id", required = true)
     private String id;
 
     @Override

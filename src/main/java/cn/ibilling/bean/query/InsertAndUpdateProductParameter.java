@@ -13,31 +13,31 @@ import java.util.List;
 public class InsertAndUpdateProductParameter {
 
     //产品名称
-    @ApiModelProperty(value = "产品名称", name = "productName")
+    @ApiModelProperty(value = "产品名称", name = "productName", required = true)
     private String productName;
     //产品类型
-    @ApiModelProperty(value = "产品类型", name = "productType")
+    @ApiModelProperty(value = "产品类型", name = "productType", required = true)
     private String productType;
     //属性类型
-    @ApiModelProperty(value = "属性类型", name = "propertyType")
+    @ApiModelProperty(value = "属性类型", name = "propertyType", required = true)
     private String propertyType;
     //计费方式
-    @ApiModelProperty(value = "计费方式", name = "billingModeId")
+    @ApiModelProperty(value = "计费方式", name = "billingModeId", required = true)
     private String billingModeId;
     //生效时间
-    @ApiModelProperty(value = "生效时间", name = "eftDate")
+    @ApiModelProperty(value = "生效时间", name = "eftDate", required = true)
     private Date eftDate;
     //失效时间
-    @ApiModelProperty(value = "失效时间", name = "expDate")
+    @ApiModelProperty(value = "失效时间", name = "expDate", required = true)
     private Date expDate;
     //备注
-    @ApiModelProperty(value = "备注", name = "remark")
+    @ApiModelProperty(value = "备注", name = "remark", required = true)
     private String remark;
     //定价计划ID
-    @ApiModelProperty(value = "定价计划ID", name = "pricingPlanId")
+    @ApiModelProperty(value = "定价计划ID", name = "pricingPlanId", required = true)
     private String pricingPlanId;
     //定价计划ID
-    @ApiModelProperty(value = "产品属性数组", name = "attrs", dataType = "List")
+    @ApiModelProperty(value = "产品属性数组", name = "attrs", dataType = "List", required = false)
     private List<ProductAttrBean> attrs;
 
     public InsertAndUpdateProductParameter() {

@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 public class IdsParameter {
 
     @NotEmpty(message = "ids不能为空")
-    @ApiModelProperty(value = "批量Id,id以逗号分隔", name = "ids")
+    @ApiModelProperty(value = "批量Id,id以逗号分隔", name = "ids", required = true)
     private String ids;
 
     public IdsParameter(@NotNull @NotEmpty String ids) {

@@ -10,25 +10,25 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(value = "FindProductParameter", description = "产品查询类")
 public class FindProductParameter {
     //产品名称
-    @ApiModelProperty(value = "产品名称", name = "productName")
+    @ApiModelProperty(value = "产品名称", name = "productName", required = false)
     private String productName;
     //状态
-    @ApiModelProperty(value = "状态", name = "state")
+    @ApiModelProperty(value = "状态", name = "state", required = false)
     private String state;
     //备注
-    @ApiModelProperty(value = "备注", name = "remark")
+    @ApiModelProperty(value = "备注", name = "remark", required = false)
     private String remark;
     //列名
-    @ApiModelProperty(value = "列名", name = "columnName")
+    @ApiModelProperty(value = "列名", name = "columnName", required = false)
     private String columnName;
     //排序规则
-    @ApiModelProperty(value = "排序规则", name = "order")
+    @ApiModelProperty(value = "排序规则", name = "order", required = false)
     private String order;
     //起始页
-    @ApiModelProperty(value = "起始页", name = "start")
+    @ApiModelProperty(value = "起始页", name = "start", required = false)
     private Integer start = 0;
     //单页数
-    @ApiModelProperty(value = "单页数", name = "limit")
+    @ApiModelProperty(value = "单页数", name = "limit", required = false)
     private Integer limit = 20;
 
     public String getProductName() {
