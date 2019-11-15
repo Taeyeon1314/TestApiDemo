@@ -109,7 +109,7 @@ public class ProductController {
         return new APIResultBean("0", "查询成功", new PageTotalBean("100"));
     }
 
-    @ApiOperation(value = "查询产品", notes = "根据一些条件查询产品数据")
+    @ApiOperation(value = "新增产品", notes = "新增产品数据")
     @GetMapping("/product/add")
     public APIResultBean<IdParameter> insertProduct(@RequestBody @Valid InsertAndUpdateProductParameter insertAndUpdateProductParameter) {
         return new APIResultBean("0", "新增成功", new IdParameter("100"));
